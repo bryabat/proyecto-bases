@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{038860A4-3E53-4699-89FB-779C0B295B23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>proyecto1</RootNamespace>
+    <AssemblyName>proyecto1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agregarclientesinfacturA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarclientesinfacturA.Designer.cs">
+      <DependentUpon>agregarclientesinfacturA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregarpersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarpersona.Designer.cs">
+      <DependentUpon>agregarpersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anuladologin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anuladologin.Designer.cs">
+      <DependentUpon>anuladologin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anular.Designer.cs">
+      <DependentUpon>anular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarclientes.Designer.cs">
+      <DependentUpon>buscarclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscardescripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscardescripcion.Designer.cs">
+      <DependentUpon>buscardescripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscargrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscargrupo.Designer.cs">
+      <DependentUpon>buscargrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarmarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarmarca.Designer.cs">
+      <DependentUpon>buscarmarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarmodelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarmodelo.Designer.cs">
+      <DependentUpon>buscarmodelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarprocutoparaventa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarprocutoparaventa.Designer.cs">
+      <DependentUpon>buscarprocutoparaventa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buscarproducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buscarproducto.Designer.cs">
+      <DependentUpon>buscarproducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSQUEDAFACTURA.cs" />
+    <Compile Include="cambiarcontraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cambiarcontraseña.Designer.cs">
+      <DependentUpon>cambiarcontraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes.Designer.cs">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs" />
+    <Compile Include="contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contraseña.Designer.cs">
+      <DependentUpon>contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dato_a_pasar.cs" />
+    <Compile Include="DespedirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DespedirUsuario.Designer.cs">
+      <DependentUpon>DespedirUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="encriptado.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPAdministrador.Designer.cs">
+      <DependentUpon>FormPAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarioC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuarioC.Designer.cs">
+      <DependentUpon>FormUsuarioC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoAgotado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoAgotado.Designer.cs">
+      <DependentUpon>ProductoAgotado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedores.Designer.cs">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="realizar_pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="realizar_pago.Designer.cs">
+      <DependentUpon>realizar_pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroProductos.Designer.cs">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroU.Designer.cs">
+      <DependentUpon>RegistroU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="saldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saldo.Designer.cs">
+      <DependentUpon>saldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tipofactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tipofactura.Designer.cs">
+      <DependentUpon>tipofactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta.Designer.cs">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verfacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verfacturas.Designer.cs">
+      <DependentUpon>verfacturas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="agregarclientesinfacturA.resx">
+      <DependentUpon>agregarclientesinfacturA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agregarpersona.resx">
+      <DependentUpon>agregarpersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anuladologin.resx">
+      <DependentUpon>anuladologin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anular.resx">
+      <DependentUpon>anular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarclientes.resx">
+      <DependentUpon>buscarclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscardescripcion.resx">
+      <DependentUpon>buscardescripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscargrupo.resx">
+      <DependentUpon>buscargrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarmarca.resx">
+      <DependentUpon>buscarmarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarmodelo.resx">
+      <DependentUpon>buscarmodelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarprocutoparaventa.resx">
+      <DependentUpon>buscarprocutoparaventa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buscarproducto.resx">
+      <DependentUpon>buscarproducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cambiarcontraseña.resx">
+      <DependentUpon>cambiarcontraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contraseña.resx">
+      <DependentUpon>contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DespedirUsuario.resx">
+      <DependentUpon>DespedirUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPAdministrador.resx">
+      <DependentUpon>FormPAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuarioC.resx">
+      <DependentUpon>FormUsuarioC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoAgotado.resx">
+      <DependentUpon>ProductoAgotado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="proveedores.resx">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="realizar_pago.resx">
+      <DependentUpon>realizar_pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroProductos.resx">
+      <DependentUpon>RegistroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroU.resx">
+      <DependentUpon>RegistroU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saldo.resx">
+      <DependentUpon>saldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipofactura.resx">
+      <DependentUpon>tipofactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta.resx">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verfacturas.resx">
+      <DependentUpon>verfacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
