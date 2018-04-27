@@ -210,5 +210,29 @@ namespace proyecto1
             form.ShowDialog();
             this.Show();
         }
+
+        private void verServidoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            servidoresexistentes form = new servidoresexistentes();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            coneccion form = new coneccion();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void cambiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            canbiarservidor form = new canbiarservidor();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }

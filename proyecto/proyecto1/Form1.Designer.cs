@@ -61,7 +61,7 @@
             this.label3.Location = new System.Drawing.Point(251, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 44);
+            this.label3.Size = new System.Drawing.Size(227, 43);
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña:";
             // 
@@ -81,7 +81,7 @@
             this.label2.Location = new System.Drawing.Point(83, 58);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(558, 44);
+            this.label2.Size = new System.Drawing.Size(544, 43);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ingrese su nombre de usuario:";
             // 
@@ -129,6 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

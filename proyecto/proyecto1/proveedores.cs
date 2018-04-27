@@ -23,10 +23,13 @@ namespace proyecto1
         {
 
             Conexion.Open();
-            MySqlCommand Guardar1 = new MySqlCommand("INSERT INTO proveedor (nombre,apellido,telefono) VALUES('" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtTelefono.Text + "')", Conexion);
+
+            MySqlCommand Guardar1 = new MySqlCommand("CALL RAproveedores('" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtTelefono.Text + "')", Conexion);
+            // MySqlCommand Guardar1 = new MySqlCommand("INSERT INTO proveedor (nombre,apellido,telefono) VALUES('" + txtnombre.Text + "','" + txtapellido.Text + "','" + txtTelefono.Text + "')", Conexion);
             Guardar1.ExecuteNonQuery();
             Conexion.Close();
             MessageBox.Show("nuevo Proveedor agregado correctamente");
+            this.Close();
         }
 
         private void proveedores_Load(object sender, EventArgs e)

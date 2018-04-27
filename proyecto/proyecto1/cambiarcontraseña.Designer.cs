@@ -60,7 +60,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(105, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(372, 192);
             this.dataGridView1.TabIndex = 2;
             // 
             // button1
@@ -71,6 +71,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Cambiar.";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cambiarcontraseña
             // 
@@ -85,6 +86,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cambiarcontraseña";
             this.Text = "cambiar contraseña";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.cambiarcontraseña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -33,3 +33,6 @@ C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1
 C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.tipofactura.resources
 C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.realizar_pago.resources
 C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.saldo.resources
+C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.cambiarcontraseña.resources
+C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.verfacturas.resources
+C:\Users\MicroSistemas\Documents\Visual Studio 2015\Projects\proyecto1\proyecto1\obj\Debug\proyecto1.coneccion.resources

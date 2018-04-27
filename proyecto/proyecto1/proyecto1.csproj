@@ -121,13 +121,26 @@
     <Compile Include="cambiarcontraseña.Designer.cs">
       <DependentUpon>cambiarcontraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="canbiarservidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="canbiarservidor.Designer.cs">
+      <DependentUpon>canbiarservidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clientes.Designer.cs">
       <DependentUpon>clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="coneccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coneccion.Designer.cs">
+      <DependentUpon>coneccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="conexion2v.cs" />
     <Compile Include="contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +211,12 @@
     <Compile Include="saldo.Designer.cs">
       <DependentUpon>saldo.cs</DependentUpon>
     </Compile>
+    <Compile Include="servidoresexistentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servidoresexistentes.Designer.cs">
+      <DependentUpon>servidoresexistentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="tipofactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,8 +271,14 @@
     <EmbeddedResource Include="cambiarcontraseña.resx">
       <DependentUpon>cambiarcontraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="canbiarservidor.resx">
+      <DependentUpon>canbiarservidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coneccion.resx">
+      <DependentUpon>coneccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="contraseña.resx">
       <DependentUpon>contraseña.cs</DependentUpon>

@@ -62,9 +62,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(839, 324);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 24);
+            this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Ingrese numero de factura que desea anular";
+            this.label1.Text = "cambiar a clik";
             // 
             // dataGridView1
             // 

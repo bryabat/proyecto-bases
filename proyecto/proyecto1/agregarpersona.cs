@@ -34,7 +34,7 @@ namespace proyecto1
             try
             {
                 Conexion.Open();
-                MySqlCommand us = new MySqlCommand("INSERT INTO empleados(nombres,dpi,apellidos,fecha_nacimiento,Estadocivil,celular,correo_electronico,direccion) VALUES('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "')", Conexion);
+                MySqlCommand us = new MySqlCommand("call RAagregarpersonal('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "')", Conexion);
                 us.ExecuteNonQuery();
                 Conexion.Close();
                 MessageBox.Show("Usuario guardado correctamente");

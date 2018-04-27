@@ -83,7 +83,7 @@ namespace proyecto1
             try
             {
                 Conexion.Open();
-                MySqlCommand Guardar1 = new MySqlCommand("INSERT INTO productos (nombre,grupo,descripcion,modelo,marca,existencia,costo,iva,precio_con_iva,ganancia,precio,proveedor_id_proveedor) VALUES('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" +textBox5.Text+ "','" + textBox7.Text + "','" + costo + "','" + iva + "','" + precioconiva + "','" + ganacia + "','" + precio + "','" + textBox9.Text + "')", Conexion);
+                MySqlCommand Guardar1 = new MySqlCommand("call RAProducto('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" +textBox5.Text+ "','" + textBox7.Text + "','" + costo + "','" + iva + "','" + precioconiva + "','" + ganacia + "','" + precio + "','" + textBox9.Text + "')", Conexion);
                 Guardar1.ExecuteNonQuery();
                 Conexion.Close();
                 MessageBox.Show("Producto agregado correctamente");

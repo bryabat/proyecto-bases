@@ -19,7 +19,15 @@ namespace proyecto1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            try{
+                DialogResult result = MessageBox.Show("desea anular la factura ?", "AVISO", MessageBoxButtons.YesNo);
+                  if (result == DialogResult.Yes)
+                    {
+                    BUSQUEDAFACTURA.idproduc = this.dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                }
+                }
+            catch { }
+            
         }
     }
 }

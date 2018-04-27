@@ -23,7 +23,7 @@ namespace proyecto1
         {
             try{
                 Conexion3.Open();
-                MySqlCommand Guardar1 = new MySqlCommand("INSERT INTO clientes (NIT,nombre,apellido,direccion) VALUES('" + textBox1.Text + "','" + txtnombre.Text + "','" + textapellido.Text + "','" + txtdireccion.Text + "')", Conexion3);
+                MySqlCommand Guardar1 = new MySqlCommand("call RAclientesinfactura('" + textBox1.Text + "','" + txtnombre.Text + "','" + textapellido.Text + "','" + txtdireccion.Text + "')", Conexion3);
                 Guardar1.ExecuteNonQuery();
                 Conexion3.Close();
                 MessageBox.Show("nuevo cliente agregado correctamente");
