@@ -1,0 +1,125 @@
+triger fecha actual factura
+CREATE DEFINER=`root`@`localhost` TRIGGER `fecha` BEFORE INSERT ON `factura` FOR EACH ROW BEGIN
+set new.fecha = now();
+END
+
+###############################################
+trigger descontar producto
+CREATE DEFINER=`root`@`localhost` TRIGGER `detalle_de_factura_after_insert` AFTER INSERT ON `detalle_de_factura` FOR EACH ROW BEGIN
+DECLARE vCantidad, vPrecio INTEGER DEFAULT 0;
+Set vCantidad = (SELECT productos.existencia FROM productos WHERE productos.id_productos = new.id_producto);
+SET vPrecio = (SELECT productos.precio FROM productos WHERE productos.id_productos = new.id_producto);
+
+IF vCantidad >= new.cantidad THEN 
+
+	UPDATE productos SET productos.existencia = productos.existencia - new.cantidad WHERE productos.id_productos = new.id_producto;
+	Set vPrecio = vPrecio * NEW.cantidad;
+	UPDATE factura SET factura.total_Venta = factura.total_Venta + vPrecio;
+
+END IF;
+
+END
+############################
+
+agregar personal pocedimento almacenado
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RAagregarpersonal`(
+	IN `vno` VARCHAR(50),
+	IN `vdpi` VARCHAR(50),
+	IN `vape` VARCHAR(50),
+	IN `vfech` DATE,
+	IN `vestad` VARCHAR(50),
+	IN `vcel` VARCHAR(50),
+	IN `vcorreo` VARCHAR(50),
+	IN `vdireccion` VARCHAR(50)
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO empleados(nombres,dpi,apellidos,fecha_nacimiento,Estadocivil,celular,correo_electronico,direccion)values(vno,vdpi,vape,vfech,vestad,vcel,vcorreo,vdireccion);
+END
+
+######################################
+procedimiento almacenado cambiar servidor
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RAcambiarservidor`(
+	IN `vs` VARCHAR(50),
+	IN `vbds` VARCHAR(50),
+	IN `vu` VARCHAR(50),
+	IN `vc` VARCHAR(50),
+	IN `vnls` VARCHAR(50)
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+insert into servidorvariable (servidor, base_Datos, usuarios,contrasena, Nombre_lugar_fisico_servidor)values(vs,vbds,vu,vc,vnls);
+END
+#########################################
+procedimiento almacenado 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RAclientesinfactura`(
+	IN `vnit` INT,
+	IN `vnom` INT,
+	IN `vapellido` INT,
+	IN `vdireccion` INT
+
+
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO clientes (NIT,nombre,apellido,direccion) VALUES(vnit,vnom,vapellido,vdireccion);
+END
+
+##############################
+procedimiento almacenado agregar producto
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RAProducto`(
+	IN `vnp` VARCHAR(50),
+	IN `vgp` VARCHAR(50),
+	IN `vdp` VARCHAR(50),
+	IN `vmodp` VARCHAR(50),
+	IN `vmarcap` VARCHAR(50),
+	IN `vexisp` INT,
+	IN `vcostp` DOUBLE,
+	IN `vivap` DOUBLE,
+	IN `vpci` DOUBLE,
+	IN `vgan` DOUBLE,
+	IN `vprecio` DOUBLE,
+	IN `proveedorid` INT
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+INSERT INTO productos (nombre,grupo,descripcion,modelo,marca,existencia,costo,iva,precio_con_iva,ganancia,precio,proveedor_id_proveedor) VALUES(vnp,vgp,vdp,vmodp,vmarcap,vexisp,vcostp,vivap,vpci,vgan,vprecio,proveedorid);
+END
+#########################
+procedimiento almacenado agregar proveedor
+CREATE DEFINER=`root`@`localhost` PROCEDURE `RAproveedores`(
+	IN `vn` VARCHAR(50),
+	IN `va` VARCHAR(50),
+	IN `vt` VARCHAR(50)
+
+)
+LANGUAGE SQL
+NOT DETERMINISTIC
+CONTAINS SQL
+SQL SECURITY DEFINER
+COMMENT ''
+BEGIN
+
+INSERT INTO proveedor (nombre,apellido,telefono) VALUES(vn,va,vt);
+
+END
